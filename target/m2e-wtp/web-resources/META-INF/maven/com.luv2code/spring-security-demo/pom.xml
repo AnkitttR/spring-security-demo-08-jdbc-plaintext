@@ -23,6 +23,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
+			<!-- Version mentioned in line 13, automatically updated below -->
 			<version>${springframework.version}</version>
 		</dependency>
 
@@ -30,12 +31,14 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
-			<version>${springsecurity.version}</version>
+			<!-- Version mentioned in line 14, automatically updated below -->
+			<version>${springsecurity.version}</version>  
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
+			<!-- Version mentioned in line 14, automatically updated below -->
 			<version>${springsecurity.version}</version>
 		</dependency>
 
