@@ -5,6 +5,14 @@
 
 	<head>
 		<title>Custom Login Page</title>
+		
+		<style>
+		.failed{
+			color: red;
+		}
+		
+		</style>
+		
 	</head>
 
 
@@ -18,7 +26,7 @@
 		
 		<c:if test="${param.error!=null}">
 		
-		<i>Sorry! You entered invalid username/password.</i>
+		<iclass="failed">Sorry! You entered invalid username/password.</i>
 		</c:if>
 		<p>
 		    User name: <input type="text" name="username"/>		
