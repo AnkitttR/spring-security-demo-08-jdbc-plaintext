@@ -26,7 +26,7 @@
 		
 		<c:if test="${param.error!=null}">
 		
-		<iclass="failed">Sorry! You entered invalid username/password.</i>
+		<i class="failed">Sorry! You entered invalid username/password.</i>
 		</c:if>
 		<p>
 		    User name: <input type="text" name="username"/>		
