@@ -19,6 +19,10 @@
 	
 	<hr>
 	<!-- display user name & role -->
+	
+	<p>
+		User: <security:authentication property="principal.username"/>
+	</p>
 	<hr>
 	
 	
