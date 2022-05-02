@@ -90,7 +90,7 @@ x<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 						</div>
 						
 						<!-- I am manually adding tokens ... Bro! -->
-						<!-- Since we are not using <form:form></form:form we have to manually add csrf token"> -->
+						<!-- Since we are not using form:form we have to manually add csrf token" -->
 						<input type="hidden" 
 							   name="${_csrf.parameterName}"
 						       value="${_csrf.token}" />
