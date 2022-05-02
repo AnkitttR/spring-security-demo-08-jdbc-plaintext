@@ -17,6 +17,11 @@
 	Welcome to the luv2code company home page!
 	</p>
 	
+	<hr>
+	<!-- display user name & role -->
+	<hr>
+	
+	
 	<!-- Add a logout button -->
 	<form:form action="${pageContext.request.contextPath}/logout" method="POST">
 	
