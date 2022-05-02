@@ -36,7 +36,7 @@ x<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 				<div style="padding-top: 30px" class="panel-body">
 
 					<!-- Login Form -->
-					<form:form action="${pageContext.request.contextPath}/authenticateTheUser" 
+					<form action="${pageContext.request.contextPath}/authenticateTheUser" 
 							   method="POST" class="form-horizontal">
 
 					    <!-- Place for messages: error, alert etc ... -->
@@ -88,8 +88,15 @@ x<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 								<button type="submit" class="btn btn-success">Login</button>
 							</div>
 						</div>
-
-					</form:form>
+						
+						<!-- I am manually adding tokens ... Bro! -->
+						<!-- Since we are not using <form:form></form:form we have to manually add csrf token"> -->
+						<input type="hidden" 
+							   name="${_csrf.parameterName}"
+						       value="${_csrf.token}" />
+						
+						
+					</form>
 
 				</div>
 
