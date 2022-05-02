@@ -53,13 +53,17 @@ x<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 									</div>
 								
 								</c:if>
-																	
+											
+									<!-- Check for logout -->								
+											            
+									<c:if test="${param.error != null}">		            
 											            
 									<div class="alert alert-success col-xs-offset-1 col-xs-10">
 										You have been logged out.
 									</div>
 								    
-
+                                    </c:if>
+                                    
 					            </div>
 					        </div>
 					    </div>
