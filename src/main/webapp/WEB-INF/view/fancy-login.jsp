@@ -46,7 +46,7 @@ x<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 										
 								<!-- Check for login error -->
 	
-								<c:if test="${param.error != null}">
+								<c:if test="${param.error != null}">  <!-- error null nahi hai, matlab error mein kuch value hai -->
 
 									<div class="alert alert-danger col-xs-offset-1 col-xs-10">
 										Invalid username and password.
