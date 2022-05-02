@@ -54,11 +54,11 @@ x<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 								
 								</c:if>
 																	
-									<!--		            
+											            
 									<div class="alert alert-success col-xs-offset-1 col-xs-10">
 										You have been logged out.
 									</div>
-								    -->
+								    
 
 					            </div>
 					        </div>
