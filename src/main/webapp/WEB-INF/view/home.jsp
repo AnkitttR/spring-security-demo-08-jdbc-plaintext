@@ -32,6 +32,12 @@
 		<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
 		(Only for Manager peeps)
 	</p>
+	<!-- Add a link to point to /systems ... this is for the admins -->
+	
+	<p>
+		<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+		(Only for Manager peeps)
+	</p>
 	
 	<hr>
 	
