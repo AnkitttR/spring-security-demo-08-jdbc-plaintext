@@ -47,6 +47,16 @@ public class DemoAppConfig {
 	@Bean
 	public DataSource securityDataSource() {
 		
+		// create connection pool
+		
+		// set the hdbc driver class
+		
+		// log the connection properties
+		
+		// set database connection properties
+		
+		// set connection pool properties
+		
 		return null;
 	}
 	
