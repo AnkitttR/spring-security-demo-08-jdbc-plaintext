@@ -46,7 +46,7 @@
 	
 	<hr>
 	
-	<hr>
+	
 	
 	<!-- Add a logout button -->
 	<form:form action="${pageContext.request.contextPath}/logout" method="POST">
