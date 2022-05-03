@@ -18,6 +18,10 @@
 	Keep this trip a secret, don't tell the regular employees LOL :-)
 	</p>
 	
+	<hr>
+	
+	<a href="${pageContext.request.contextPath}/">Back to Home Page</a>
+	
 	</body>
 
 
