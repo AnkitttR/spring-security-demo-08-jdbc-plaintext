@@ -26,12 +26,15 @@
 		Role (s) : <security:authentication property="principal.authorities" />
 	</p>
 	
-	<!-- Add a link to point to /leaders ... this is for the managers -->
+	<security:authorize access="hasRole('MANAGER')">
+			<!-- Add a link to point to /leaders ... this is for the managers -->
+			
+			<p>
+				<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+				(Only for Manager peeps)
+			</p>
+	</security:authorize>
 	
-	<p>
-		<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
-		(Only for Manager peeps)
-	</p>
 	<!-- Add a link to point to /systems ... this is for the admins -->
 	
 	<p>
