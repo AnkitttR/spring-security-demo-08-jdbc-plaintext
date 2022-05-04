@@ -1,6 +1,7 @@
 package com.luv2code.springsecurity.demo.config;
 
 
+import java.beans.PropertyVetoException;
 import java.util.logging.Logger;
 
 import javax.sql.DataSource;
@@ -53,11 +54,24 @@ public class DemoAppConfig {
 		ComboPooledDataSource securityDataSource = new ComboPooledDataSource();
 		
 		// set the jdbc driver class
-		securityDataSource.setDriverClass(env.getProperty("jdbc.driver"));
+		try {
+			securityDataSource.setDriverClass(env.getProperty("jdbc.driver"));
+		} catch (PropertyVetoException exc) {
+			throw new RuntimeException(exc);
+			
+		}
 		
 		// log the connection properties
+		// for sanity's sake, log this info
+		// just to make sure we are REALLY reading data from properties file
+		logger.info(">>> jdbc.url=" + env.getProperty("jdbc.url"));
+		logger.info(">>> jdbc.user=" + env.getProperty("jdbc.user"));
+		
 		
 		// set database connection properties
+		securityDataSource.setJdbcUrl(env.getProperty("jdbc.url"));
+		securityDataSource.setUser(env.getProperty("jdbc.user"));
+		securityDataSource.setPassword(env.getProperty("jdbc.password"));
 		
 		// set connection pool properties
 		
