@@ -15,6 +15,8 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages="com.luv2code.springsecurity.demo")
@@ -48,8 +50,10 @@ public class DemoAppConfig {
 	public DataSource securityDataSource() {
 		
 		// create connection pool
+		ComboPooledDataSource securityDataSource = new ComboPooledDataSource();
 		
-		// set the hdbc driver class
+		// set the jdbc driver class
+		securityDataSource.setDriverClass(env.getProperty("jdbc.driver"));
 		
 		// log the connection properties
 		
@@ -57,7 +61,7 @@ public class DemoAppConfig {
 		
 		// set connection pool properties
 		
-		return null;
+		return securityDataSource;
 	}
 	
 	
